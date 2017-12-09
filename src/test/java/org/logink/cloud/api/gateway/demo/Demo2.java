@@ -33,7 +33,7 @@ public class Demo2 {
         /**
     	* 重要提示如下:
     	* SignUtil请从
-    	* https://github.com/huojuntao/logink-cloud-api-demo/blob/master/logink-cloud-client-demo/src/main/java/org/logink/cloud/api/gateway/demo/util/SignUtil.java
+    	* https://github.com/huojuntao/logink-cloud-api-railway-demo-java/tree/master/src/main/java/org/logink/cloud/api/gateway/demo/util/SignUtil.java
     	* 下载
     	*/
         headers.put("X-Ca-Signature",
@@ -52,11 +52,11 @@ public class Demo2 {
 			/**
 	    	* 重要提示如下:
 	    	* HttpUtils请从
-	    	* https://github.com/huojuntao/logink-cloud-api-demo/blob/master/logink-cloud-client-demo/src/main/java/org/logink/cloud/api/gateway/demo/util/HttpUtils.java
+	    	* https://github.com/huojuntao/logink-cloud-api-railway-demo-java/tree/master/src/main/java/org/logink/cloud/api/gateway/demo/util/HttpUtils.java
 	    	* 下载
 	    	*
 	    	* 相应的依赖请参照
-	    	* https://github.com/huojuntao/logink-cloud-api-demo/blob/master/logink-cloud-client-demo/pom.xml
+	    	* https://github.com/huojuntao/logink-cloud-api-railway-demo-java/pom.xml
 	    	*/
 			HttpResponse response = HttpUtils.httpPost(host, path, timeout, headers, querys, body, 
 					signHeaderPrefixList, appkey, appsecret);
