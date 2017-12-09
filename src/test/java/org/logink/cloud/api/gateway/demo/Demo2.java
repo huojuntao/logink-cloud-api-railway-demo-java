@@ -13,7 +13,6 @@ import org.logink.cloud.api.gateway.demo.util.HttpUtils;
 import org.logink.cloud.api.gateway.demo.util.SignUtils;
 
 public class Demo2 {
-	
 	public static void main(String[] args) {
 	    String host = "https://api.logink.org";
 	    String path = "/railway-query/subscribe";
@@ -67,8 +66,5 @@ public class Demo2 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
-	
-	
 }
