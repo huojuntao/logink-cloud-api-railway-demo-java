@@ -35,10 +35,9 @@ import com.alibaba.fastjson.JSON;
  */
 public class Demo {
     //APP KEY
-    private final static String APP_KEY = "你自己的AppKey";
+    private final static String APP_KEY = "4FD1CC4FDAA751CAE08321E1523142D9";
     // APP SECRET
-    private final static String APP_SECRET = "你自己的AppSecret";
-
+    private final static String APP_SECRET = "201D54B6FF95C7CE213662970F365855";
     //API HOST
     private final static String HOST = "api.logink.org";
     //API PATH
