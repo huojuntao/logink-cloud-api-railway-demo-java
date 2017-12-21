@@ -33,6 +33,7 @@ public class Demo2 {
     	* 重要提示如下:
     	* SignUtil请从
     	* https://github.com/huojuntao/logink-cloud-api-railway-demo-java/tree/master/src/main/java/org/logink/cloud/api/gateway/demo/util/SignUtil.java
+    	* SignUtils请从
     	* 下载
     	*/
         headers.put("X-Ca-Signature",
