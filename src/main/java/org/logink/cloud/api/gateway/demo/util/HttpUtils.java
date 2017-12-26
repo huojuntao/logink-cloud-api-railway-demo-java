@@ -115,7 +115,7 @@ public class HttpUtils {
      * @return
      * @throws Exception
      */
-    public static HttpResponse httpPost(String host, String path, int connectTimeout, Map<String, String> headers, Map<String, String> querys, String body, List<String> signHeaderPrefixList, String appKey, String appSecret)
+    public static HttpResponse httpPost(String host, String path, int connectTimeout, Map<String, String> headers, Map<String, String> querys, String body)
             throws Exception {
 
     	HttpClient httpClient = wrapClient(host);
