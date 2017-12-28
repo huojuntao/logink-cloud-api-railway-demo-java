@@ -109,9 +109,6 @@ public class HttpUtils {
      * @param headers
      * @param querys
      * @param body
-     * @param signHeaderPrefixList
-     * @param appKey
-     * @param appSecret
      * @return
      * @throws Exception
      */
@@ -134,7 +131,38 @@ public class HttpUtils {
         return httpClient.execute(post);
     }
 
+    /**
+     * Http POST
+     * @param host
+     * @param path
+     * @param connectTimeout
+     * @param headers
+     * @param querys
+     * @param body
+     * @param signHeaderPrefixList
+     * @param appKey
+     * @param appSecret
+     * @return
+     * @throws Exception
+     */
+    public static HttpResponse httpPost(String host, String path, int connectTimeout, Map<String, String> headers, Map<String, String> querys, String body, List<String> signHeaderPrefixList, String appKey, String appSecret)
+            throws Exception {
 
+    	HttpClient httpClient = wrapClient(host);
+        httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, getTimeout(connectTimeout));
+
+        HttpPost post = new HttpPost(initUrl(host, path, querys));
+        for (Map.Entry<String, String> e : headers.entrySet()) {
+            post.addHeader(e.getKey(), utf8ToIso88591(e.getValue()));
+        }
+
+        if (StringUtils.isNotBlank(body)) {
+            post.setEntity(new StringEntity(body, ENCODING));
+
+        }
+
+        return httpClient.execute(post);
+    }
     private static String initUrl(String host, String path, Map<String, String> querys) throws UnsupportedEncodingException {
     	StringBuilder sbUrl = new StringBuilder();
     	sbUrl.append(host);
