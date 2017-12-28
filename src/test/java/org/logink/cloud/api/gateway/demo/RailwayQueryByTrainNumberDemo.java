@@ -12,10 +12,10 @@ import org.apache.http.util.EntityUtils;
 import org.logink.cloud.api.gateway.demo.util.HttpUtils;
 import org.logink.cloud.api.gateway.demo.util.SignUtils;
 
-public class Demo2 {
+public class RailwayQueryByTrainNumberDemo {
 	public static void main(String[] args) {
 	    String host = "https://api.logink.org";
-	    String path = "/railway-query/subscribe";
+	    String path = "/railway-query/queryByTrainNumber";
 	    int timeout = 1000;
 	    String appkey = "你自己的AppKey";
 	    String appsecret = "你自己的AppSecret";
@@ -38,14 +38,7 @@ public class Demo2 {
         headers.put("X-Ca-Signature",
         		SignUtils.sign(appsecret, headers, signHeaderPrefixList));
         
-	    String body = "{\"taskId\":\"4028830b5f512c68015f512f22e40000\","   //订阅标识符
-	    		+ "\"railwayWagonNumber\":\"1640917\", " //车号
-	    		+ "\"containerNumber\":\"\","  //集装箱箱号
-	    		+ "\"shippingNodeNumber\":\"\","   //运单号
-	    		+ "\"invoiceNumber\":\"\","     //货票号
-	    		+ "\"placeOfDeparture\":\"\", "    //发站
-	    		+ "\"destination\":\"小塘西\","    //到达站
-	    		+ "\"endDate\":\"2017-12-20\"}";    //订阅截止时间
+        String body = "{\"railwayWagonNumber\":\"1640917\"}"; 
 	   
 		try {
 			/**
