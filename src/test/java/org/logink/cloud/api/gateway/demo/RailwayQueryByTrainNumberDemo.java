@@ -38,7 +38,7 @@ public class RailwayQueryByTrainNumberDemo {
         headers.put("X-Ca-Signature",
         		SignUtils.sign(appsecret, headers, signHeaderPrefixList));
         
-        String body = "{\"railwayWagonNumber\":\"1640917\"}"; 
+        String body = "{\"railwayWagonNumber\":\"1111111\"}"; 
 	   
 		try {
 			/**

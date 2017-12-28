@@ -38,13 +38,13 @@ public class RailwaySubscribeDemo {
         headers.put("X-Ca-Signature",
         		SignUtils.sign(appsecret, headers, signHeaderPrefixList));
         
-	    String body = "{\"taskId\":\"4028830b5f512c68015f512f22e40000\","   //订阅标识符
-	    		+ "\"railwayWagonNumber\":\"1640917\", " //车号
+	    String body = "{\"taskId\":\"4028830b5f512c68015f\","   //订阅标识符
+	    		+ "\"railwayWagonNumber\":\"1111111\", " //车号
 	    		+ "\"containerNumber\":\"\","  //集装箱箱号
 	    		+ "\"shippingNodeNumber\":\"\","   //运单号
 	    		+ "\"invoiceNumber\":\"\","     //货票号
 	    		+ "\"placeOfDeparture\":\"\", "    //发站
-	    		+ "\"destination\":\"小塘西\","    //到达站
+	    		+ "\"destination\":\"到达站\","    //到达站
 	    		+ "\"endDate\":\"2017-12-20\"}";    //订阅截止时间
 	   
 		try {

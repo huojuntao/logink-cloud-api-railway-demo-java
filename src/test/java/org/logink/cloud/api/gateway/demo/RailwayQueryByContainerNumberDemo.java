@@ -38,7 +38,7 @@ public class RailwayQueryByContainerNumberDemo {
         headers.put("X-Ca-Signature",
         		SignUtils.sign(appsecret, headers, signHeaderPrefixList));
         
-	    String 	body = "{\"containerNumber\":\"TBJU4331147\"}";   //箱号
+	    String 	body = "{\"containerNumber\":\"TBJU1111111\"}";   //箱号
 	   
 		try {
 			/**
